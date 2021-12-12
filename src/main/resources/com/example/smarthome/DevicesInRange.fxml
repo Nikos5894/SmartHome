@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="624.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" >
+    <children>
+      <AnchorPane layoutY="14.0" prefHeight="77.0" prefWidth="609.0" style="-fx-background-color: #0C39FF;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label alignment="CENTER" layoutX="259.0" layoutY="27.0" prefHeight="23.0" prefWidth="106.0" text="Smart Home" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="52.0" layoutX="552.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icons8_50px.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnGoBack" layoutX="14.0" layoutY="21.0" mnemonicParsing="false" onAction="#btnGoBackMethod" prefHeight="34.0" prefWidth="30.0" text="&lt;-" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tableUsers" layoutY="78.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="624.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="77.0">
+         <columns>
+            <TableColumn fx:id="idColumn" prefWidth="48.80004960298538" resizable="false" text="№" />
+            <TableColumn fx:id="nameColumn" prefWidth="147.20000839233398" resizable="false" text="Name" />
+            <TableColumn fx:id="modelColumn" prefWidth="128.8000030517578" resizable="false" text="Model" />
+            <TableColumn fx:id="capacityColumn" prefWidth="78.4000244140625" text="Capacity" />
+            <TableColumn fx:id="connectColumn" prefWidth="131.2000732421875" resizable="false" text="Is connected" />
+            <TableColumn fx:id="roomColumn" prefWidth="84.7999267578125" resizable="false" text="Room id" />
+         </columns>
+         <padding>
+            <Insets bottom="1.0" left="1.0" right="1.0" />
+         </padding>
+      </TableView>
+    </children>
+</AnchorPane>

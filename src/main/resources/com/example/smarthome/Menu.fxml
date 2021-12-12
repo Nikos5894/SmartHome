@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarthome.Controllers.MenuController">
+   <children>
+      <Pane layoutX="183.0" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="43.0" fitWidth="45.0" layoutX="545.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/icons8_XING_100px.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" layoutX="217.0" layoutY="24.0" prefHeight="23.0" prefWidth="166.0" text="Menu" textFill="#143ccc">
+               <font>
+                  <Font name="Segoe UI" size="31.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnDevice" layoutX="85.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnDeviceMethod" prefHeight="34.0" prefWidth="120.0" text="Devices" />
+            <Button fx:id="btnRoom" layoutX="379.0" layoutY="119.0" mnemonicParsing="false" onAction="#btnRoomMethod" prefHeight="34.0" prefWidth="132.0" text="Rooms" />
+            <ImageView fitHeight="163.0" fitWidth="210.0" layoutX="43.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Devices.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnGoBack" layoutX="28.0" layoutY="31.0" mnemonicParsing="false" onAction="#btnGoBackMethod" prefHeight="25.0" prefWidth="30.0" text="&lt;-" />
+            <ImageView fitHeight="204.0" fitWidth="245.0" layoutX="322.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/Rooms.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnUserSettings" layoutX="240.0" layoutY="65.0" mnemonicParsing="false" onAction="#btnUserSettingsMethod" prefHeight="34.0" prefWidth="120.0" text="User settings" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

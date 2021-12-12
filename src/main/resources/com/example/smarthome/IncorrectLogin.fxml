@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="82.0" prefWidth="210.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.smarthome.Controllers.IncorrectLogin">
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="304.0">
+         <children>
+            <Text fill="#362c2c" layoutX="56.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Невірний логін чи пароль" wrappingWidth="190.39997558593745">
+               <font>
+                  <Font name="Consolas" size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="btnOk" layoutX="67.0" layoutY="55.0" mnemonicParsing="false" onAction="#btnOkMethod" text="Натисніть щоб продовжити" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
