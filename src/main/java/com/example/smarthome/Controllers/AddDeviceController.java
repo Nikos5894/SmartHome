@@ -65,7 +65,7 @@ public class AddDeviceController {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
+            Main.SwitchScene("Device.fxml",btnAdd,true);
         }
         else {
             Main.showEmptyData();
@@ -88,6 +88,7 @@ public class AddDeviceController {
         Device device = new Device(name,model,capacity,isConnected,roomId);
 
         deviceRepository.addDevice(device);
+
     }
 
     @FXML

@@ -1,8 +1,5 @@
 package com.example.smarthome.Controllers;
 
-
-
-
 import com.example.smarthome.DataBase.UserRepository;
 import com.example.smarthome.Main;
 import com.example.smarthome.Entity.UserTable;
@@ -76,13 +73,6 @@ public class LoginController {
         stage.setTitle("Sign up window!");
         stage.showAndWait();
 
-
-    }
-
-    @FXML
-    private void initialize(){
-
-
     }
 
     private void loginUser(String loginText, String passwordText) throws SQLException, IOException {
@@ -95,8 +85,6 @@ public class LoginController {
         int counter = userRepository.getUser(user);
         if(counter >= 1){
             btnSignup.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader();
 
             Parent root = FXMLLoader.load(Main.class.getResource("Menu.fxml"));
             Stage stage = new Stage();

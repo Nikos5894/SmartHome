@@ -62,6 +62,7 @@ public class DeleteRoomController {
         String Id = txtIdText.getText().trim();
         if(!Id.equals("")){
             deleteDevice();
+            Main.SwitchScene("Room.fxml",btnDeleteRoom,true);
         }
         else{
             Main.showEmptyData();

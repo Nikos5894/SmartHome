@@ -55,7 +55,7 @@ public class AddRoomController {
             } catch (SQLException e) {
                 e.printStackTrace();
             }
-
+            Main.SwitchScene("Room.fxml",btnAddRoom,true);
         }
         else {
             Main.showEmptyData();

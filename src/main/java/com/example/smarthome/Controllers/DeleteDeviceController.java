@@ -68,6 +68,7 @@ public class DeleteDeviceController {
         String Id = txtIdText.getText().trim();
         if(!Id.equals("")){
             deleteDevice();
+            Main.SwitchScene("Device.fxml",btnDelete,true);
         }
         else{
             Main.showEmptyData();
