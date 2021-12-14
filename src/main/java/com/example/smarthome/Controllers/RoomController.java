@@ -1,6 +1,7 @@
 package com.example.smarthome.Controllers;
 
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.RoomRepository;
 import com.example.smarthome.Entity.Room;
 import com.example.smarthome.Main;
@@ -109,7 +110,7 @@ public class RoomController {
     @FXML
     private void initialize() throws SQLException {
 
-        RoomRepository rr = new RoomRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        RoomRepository rr = new RoomRepository(DBConnection.URL);
         List<Room> rooms =rr.getAllRooms();
         roomData.addAll(rooms);
 

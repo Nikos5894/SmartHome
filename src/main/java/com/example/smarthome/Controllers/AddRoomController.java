@@ -1,5 +1,6 @@
 package com.example.smarthome.Controllers;
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.RoomRepository;
 import com.example.smarthome.Entity.Room;
 import com.example.smarthome.Main;
@@ -64,7 +65,7 @@ public class AddRoomController {
     }
 
     private void addRoom() throws SQLException {
-        RoomRepository roomRepository = new RoomRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        RoomRepository roomRepository = new RoomRepository(DBConnection.URL);
 
         //ConnectionDB con = new ConnectionDB();
         String name = txtName.getText();

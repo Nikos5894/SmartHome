@@ -1,6 +1,7 @@
 package com.example.smarthome.Controllers;
 
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.UserRepository;
 
 import com.example.smarthome.Main;
@@ -47,7 +48,7 @@ public class SwitchLogController {
             String oldLogin = tfNowLogin.getText().trim();
             String newLogin = tfNewLogin.getText().trim();
             if (!oldLogin.equals("")&& !newLogin.equals("")) {
-                UserRepository ur = new UserRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+                UserRepository ur = new UserRepository(DBConnection.URL);
                 int count = 0;
                 int res = 0;
                 try {

@@ -1,6 +1,7 @@
 package com.example.smarthome.Controllers;
 
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.UserRepository;
 import com.example.smarthome.Main;
 import javafx.fxml.FXML;
@@ -48,7 +49,7 @@ public class SwitchPassController {
             String oldPassword = tfNowPassword.getText().trim();
             String newPassword = tfNewPassword.getText().trim();
             if(!login.equals("") && !oldPassword.equals("") && !newPassword.equals("")){
-                UserRepository ur = new UserRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+                UserRepository ur = new UserRepository(DBConnection.URL);
                 int count = 0;
                 int res = 0;
                 try {

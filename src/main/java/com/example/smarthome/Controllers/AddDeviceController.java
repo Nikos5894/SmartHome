@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.DeviceRepository;
 import com.example.smarthome.DataBase.RoomRepository;
 import com.example.smarthome.Entity.Device;
@@ -74,7 +75,7 @@ public class AddDeviceController {
     }
 
     private void addDevice() throws SQLException {
-        DeviceRepository deviceRepository = new DeviceRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        DeviceRepository deviceRepository = new DeviceRepository(DBConnection.URL);
 
         //ConnectionDB con = new ConnectionDB();
         String name = txtName.getText();
@@ -93,7 +94,7 @@ public class AddDeviceController {
 
     @FXML
     void initialize() throws SQLException {
-        RoomRepository rr = new RoomRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        RoomRepository rr = new RoomRepository(DBConnection.URL);
 
         List<Room> rooms = rr.getAllRooms();
         roomList.addAll(rooms);

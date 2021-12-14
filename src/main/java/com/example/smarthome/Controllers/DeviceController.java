@@ -1,6 +1,7 @@
 package com.example.smarthome.Controllers;
 
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.DeviceRepository;
 import com.example.smarthome.Entity.Device;
 import com.example.smarthome.Main;
@@ -81,7 +82,7 @@ public class DeviceController {
 
     @FXML
     void btnConnectMethod(ActionEvent event) throws SQLException, IOException {
-        DeviceRepository deviceRepository = new DeviceRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        DeviceRepository deviceRepository = new DeviceRepository(DBConnection.URL);
         String id = tfConnect.getText();
         if(!id.equals("")) {
             deviceRepository.updateDevice("Yes", Integer.parseInt(tfConnect.getText()));
@@ -124,7 +125,7 @@ public class DeviceController {
     @FXML
     private void initialize() throws SQLException {
 
-        DeviceRepository dr = new DeviceRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        DeviceRepository dr = new DeviceRepository(DBConnection.URL);
         List<Device> devices = dr.getDevices();
         deviceData.addAll(devices);
 

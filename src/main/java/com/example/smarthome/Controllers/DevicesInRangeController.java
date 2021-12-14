@@ -1,5 +1,6 @@
 package com.example.smarthome.Controllers;
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.DeviceRepository;
 import com.example.smarthome.Entity.Device;
 import com.example.smarthome.Main;
@@ -62,7 +63,7 @@ public class DevicesInRangeController {
     @FXML
 
     private void initialize() throws SQLException {
-        DeviceRepository dr = new DeviceRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        DeviceRepository dr = new DeviceRepository(DBConnection.URL);
         List<Device> devices = dr.getDevicesInRange(min,max);
         deviceData.addAll(devices);
 

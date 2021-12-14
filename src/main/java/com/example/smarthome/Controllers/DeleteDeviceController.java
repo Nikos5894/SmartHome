@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.DeviceRepository;
 import com.example.smarthome.Entity.Device;
 import com.example.smarthome.Main;
@@ -77,14 +78,14 @@ public class DeleteDeviceController {
     }
 
     private void deleteDevice() throws SQLException {
-        DeviceRepository deviceRepository = new DeviceRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        DeviceRepository deviceRepository = new DeviceRepository(DBConnection.URL);
         int id = Integer.parseInt(txtIdText.getText());
         deviceRepository.delDevice(id);
     }
 
     @FXML
     void initialize() throws SQLException {
-        DeviceRepository dr = new DeviceRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        DeviceRepository dr = new DeviceRepository(DBConnection.URL);
         List<Device> devices = dr.getDevices();
         deviceData.addAll(devices);
         // устанавливаем тип и значение которое должно хранится в колонке

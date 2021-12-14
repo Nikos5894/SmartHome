@@ -6,6 +6,7 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.Main;
 import com.example.smarthome.DataBase.UserRepository;
 import com.example.smarthome.Entity.UserTable;
@@ -85,7 +86,7 @@ public class RegistrationController {
 
     private void signUpNewUser() throws SQLException {
 
-        UserRepository userRepository = new UserRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        UserRepository userRepository = new UserRepository(DBConnection.URL);
 
         //ConnectionDB con = new ConnectionDB();
         String firstName = signUpName.getText();

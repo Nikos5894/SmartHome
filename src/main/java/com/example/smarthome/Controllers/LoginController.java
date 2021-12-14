@@ -1,5 +1,6 @@
 package com.example.smarthome.Controllers;
 
+import com.example.smarthome.DataBase.DBConnection;
 import com.example.smarthome.DataBase.UserRepository;
 import com.example.smarthome.Main;
 import com.example.smarthome.Entity.UserTable;
@@ -76,7 +77,7 @@ public class LoginController {
     }
 
     private void loginUser(String loginText, String passwordText) throws SQLException, IOException {
-        UserRepository userRepository = new UserRepository("jdbc:sqlserver://localhost:1433;database=SmartHome;user=Nikos5894;password=123455");
+        UserRepository userRepository = new UserRepository(DBConnection.URL);
 
 
         UserTable user = new UserTable();
